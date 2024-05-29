@@ -1,0 +1,13 @@
+{
+  "name": "motherload2craftingengine",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A functioning system for smelting and refining materials into other materials to be used for uppgrades and selling.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
