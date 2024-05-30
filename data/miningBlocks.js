@@ -1,102 +1,89 @@
+import { miningItems } from "./miningItems.js";
+
+
 export const miningBlocks = {
-dirt: {
-    name: 'Dirt',
-    value: 0,
-    weight: 0,
+dirtBlock: {
+    name: 'Dirt Block',
     hp: 10,
-    rarity: 'None'
+    rarity: 'None',
+    drops: "None"
 },
-coal: {
-    name: 'Coal',
-    value: 1,
-    weight: 1,
+coalBlock: {
+    name: 'Coal Block',
     hp: 12,
-    rarity: 5
+    rarity: 5,
+    drops: miningItems.coal.name
 },
-quartz: {
-    name: 'Quartz',
-    value: 1,
-    weight: 1,
+quartzBlock: {
+    name: 'Quartz Block',
     hp: 12,
-    rarity: 2.5
+    rarity: 2.5,
+    drops: miningItems.quartz.name
 },
-aluminiumOre: {
-    name: 'Aluminium Ore',
-    value: 2,
-    weight: 1,
+aluminiumOreBlock: {
+    name: 'Aluminium Ore Block',
     hp: 13,
-    rarity: 2.5
+    rarity: 2.5,
+    drops: miningItems.aluminiumOre.name
 },
-ironOre: {
-    name: 'Iron Ore',
-    value: 2,
-    weight: 2,
+ironOreBlock: {
+    name: 'Iron Ore Block',
     hp: 14,
-    rarity: 2.5
+    rarity: 2.5,
+    drops: miningItems.ironOre.name
 },
-chromiumOre: {
-    name: 'Chromium Ore',
-    value: 3,
-    weight: 2,
+chromiumOreBlock: {
+    name: 'Chromium Ore Block',
     hp: 15,
-    rarity: 1
+    rarity: 1,
+    drops: miningItems.chromiumOre.name
 },
-copperOre: {
-    name: 'Copper Ore',
-    value: 2,
-    weight: 3,
+copperOreBlock: {
+    name: 'Copper Ore Block',
     hp: 15,
-    rarity: 1
+    rarity: 1,
+    drops: miningItems.copperOre.name
 },
-lithiumOre: {
-    name: 'Lithium Ore',
-    value: 5,
-    weight: 1,
+lithiumOreBlock: {
+    name: 'Lithium Ore Block',
     hp: 16,
-    rarity: 0.5
+    rarity: 0.5,
+    drops: miningItems.lithiumOre.name
 },
-silverOre: {
-    name: 'Silver Ore',
-    value: 3,
-    weight: 4,
+silverOreBlock: {
+    name: 'Silver Ore Block',
     hp: 17,
-    rarity: 1
+    rarity: 1,
+    drops: miningItems.silverOre.name
 },
-nickelOre: {
-    name: 'Nickel Ore',
-    value: 5,
-    weight: 3,
+nickelOreBlock: {
+    name: 'Nickel Ore Block',
     hp: 18,
-    rarity: 1
+    rarity: 1,
+    drops: miningItems.nickelOre.name
 },
-zincOre: {
-    name: 'Zinc Ore',
-    value: 5,
-    weight: 3,
+zincOreBlock: {
+    name: 'Zinc Ore Block',
     hp: 18,
-    rarity: 1
+    rarity: 1,
+    drops: miningItems.zincOre.name
 },
-goldOre: {
-    name: 'Gold Ore',
-    value: 10,
-    weight: 8,
+goldOreBlock: {
+    name: 'Gold Ore Block',
     hp: 28,
-    rarity: 0.5
+    rarity: 0.5,
+    drops: miningItems.goldOre.name
 },
-diamond: {
-    name: 'Diamond',
-    value: 50,
-    weight: 1,
+diamondBlock: {
+    name: 'Diamond Block',
     hp: 61,
-    rarity: 0.1
+    rarity: 0.1,
+    drops: miningItems.diamond.name
 },
-rareEarthMinerals: {
-    name: 'Rare Earth Minerals',
-    value: 1000,
-    weight: 1,
+rareEarthMineralsBlock: {
+    name: 'Rare Earth Minerals Block',
     hp: 1011,
-    rarity: 0.001
-},
-
-
+    rarity: 0.001,
+    drops: miningItems.rareEarthMinerals.name
+}
 };

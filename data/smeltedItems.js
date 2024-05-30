@@ -1,11 +1,12 @@
 import { miningBlocks } from "./miningBlocks.js";
+import { miningItems } from "./miningItems.js";
 
 export const smeltedItems = {
     ironIngot: {
         name: "Iron Ingot",
         value: 6,
         recipe: {
-            [miningBlocks.ironOre.name]: 2
+            [miningItems.ironOre.name]: 2
         },
         craftingTime: 1
     },
@@ -13,7 +14,7 @@ export const smeltedItems = {
         name: "Copper Ingot",
         value: 6,
         recipe: {
-            [miningBlocks.copperOre.name]: 2
+            [miningItems.copperOre.name]: 2
         },
         craftingTime: 3
     },
@@ -21,7 +22,7 @@ export const smeltedItems = {
         name: "Aluminium Ingot",
         value: 6,
         recipe: {
-            [miningBlocks.aluminiumOre.name]: 2
+            [miningItems.aluminiumOre.name]: 2
         },
         craftingTime: 3
     },
@@ -29,7 +30,7 @@ export const smeltedItems = {
         name: "Silver Ingot",
         value: 8,
         recipe: {
-            [miningBlocks.silverOre.name]: 2
+            [miningItems.silverOre.name]: 2
         },
         craftingTime: 5
     },
@@ -37,7 +38,7 @@ export const smeltedItems = {
         name: "Zinc Ingot",
         value: 15,
         recipe: {
-            [miningBlocks.zincOre.name]: 2
+            [miningItems.zincOre.name]: 2
         },
         craftingTime: 30
     },
@@ -45,7 +46,7 @@ export const smeltedItems = {
         name: "Nickel Ingot",
         value: 15,
         recipe: {
-            [miningBlocks.nickelOre.name]: 2
+            [miningItems.nickelOre.name]: 2
         },
         craftingTime: 30
     },
@@ -53,7 +54,7 @@ export const smeltedItems = {
         name: "Lithium Ingot",
         value: 15,
         recipe: {
-            [miningBlocks.lithiumOre.name]: 2
+            [miningItems.lithiumOre.name]: 2
         },
         craftingTime: 30
     },
@@ -61,7 +62,7 @@ export const smeltedItems = {
         name: "Silicon",
         value: 15,
         recipe: {
-            [miningBlocks.quartz.name]: 10
+            [miningItems.quartz.name]: 10
         },
         craftingTime: 120
     },
@@ -69,7 +70,7 @@ export const smeltedItems = {
         name: "Gold Ingot",
         value: 30,
         recipe: {
-            [miningBlocks.goldOre.name]: 2
+            [miningItems.goldOre.name]: 2
         },
         craftingTime: 60
     },
@@ -88,7 +89,7 @@ smeltedItems.steel = {
     value: 8,
     recipe: {
         [smeltedItems.ironIngot.name]: 2,
-        [miningBlocks.coal.name]: 2
+        [miningItems.coal.name]: 2
     },
     craftingTime: 5
 };
@@ -97,9 +98,9 @@ smeltedItems.stainlessSteel = {
     name: "Stainless Steel",
     value: 20,
     recipe: {
-        [miningBlocks.chromiumOre.name]: 1,
+        [miningItems.chromiumOre.name]: 1,
         [smeltedItems.ironIngot.name]: 1,
-        [miningBlocks.nickelOre.name]: 1,
+        [miningItems.nickelOre.name]: 1,
     },
     craftingTime: 10
 };

@@ -1,4 +1,5 @@
 import { miningBlocks } from "./miningBlocks.js";
+import { miningItems } from "./miningItems.js";
 import { smeltedItems } from "./smeltedItems.js";
 
 
@@ -26,7 +27,7 @@ export const factoryItems = {
         name: "Laser Weapon",
         value: 1500,
         recipe: {
-            [miningBlocks.rareEarthMinerals.name]: 1
+            [miningItems.rareEarthMinerals.name]: 1
         },
         craftingTime: 600
     },
