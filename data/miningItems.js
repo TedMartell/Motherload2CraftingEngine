@@ -65,4 +65,4 @@ rareEarthMinerals: {
     value: 1000,
     weight: 1,
 }
-}
+};

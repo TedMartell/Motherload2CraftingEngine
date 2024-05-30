@@ -1,4 +1,4 @@
-import { miningBlocks } from "./miningBlocks.js";
+
 import { miningItems } from "./miningItems.js";
 import { smeltedItems } from "./smeltedItems.js";
 
