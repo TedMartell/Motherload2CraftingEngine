@@ -56,7 +56,7 @@ goldOre: {
     weight: 8,
 },
 diamond: {
-    name: 'Diamond Block',
+    name: 'Diamond',
     value: 50,
     weight: 1,
 },
