@@ -13,6 +13,7 @@ function addToInventory(items) {
         }
         globalInventoryWeight += item.weight;
         globalInventoryValue += item.value;
+        console.log(`added ${item.name} to inventory`)
     }
     return globalInventory;
 }
@@ -39,7 +40,7 @@ function removeFromInventory(items, amount) {
                 globalInventory.delete(foundItem);
             }
             
-            console.log(`${item.name} removed from inventory`);
+            console.log(`${amount}x${item.name} removed from inventory`);
         }
     }
     return globalInventory;
@@ -54,7 +55,7 @@ function getInventory(globalInventory) {
     if (inventoryString.length > 0) {
         inventoryString = inventoryString.slice(0, -2);
     }
-
+    console.log(`Inventory: ${inventoryString}\nTotal Weight: ${globalInventoryWeight}\nTotal Value: ${globalInventoryValue}`)
     return `Inventory: ${inventoryString}\nTotal Weight: ${globalInventoryWeight}\nTotal Value: ${globalInventoryValue}`;
 }
 

@@ -1,6 +1,6 @@
 import { miningBlocks } from "./miningBlocks.js";
 import { miningItems } from "./miningItems.js";
-
+// Update weight value for all
 export const smeltedItems = {
     ironIngot: {
         name: "Iron Ingot",

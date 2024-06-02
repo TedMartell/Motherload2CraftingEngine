@@ -2,7 +2,7 @@
 import { miningItems } from "./miningItems.js";
 import { smeltedItems } from "./smeltedItems.js";
 
-
+//add weight value for all! 
 
 export const factoryItems = {
     copperWire: {
