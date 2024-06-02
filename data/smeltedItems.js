@@ -5,6 +5,7 @@ export const smeltedItems = {
     ironIngot: {
         name: "Iron Ingot",
         value: 6,
+        weight: 1,
         recipe: {
             [miningItems.ironOre.name]: 2
         },
@@ -13,6 +14,7 @@ export const smeltedItems = {
     copperIngot: {
         name: "Copper Ingot",
         value: 6,
+        weight: 1,
         recipe: {
             [miningItems.copperOre.name]: 2
         },
@@ -21,6 +23,7 @@ export const smeltedItems = {
     aluminiumIngot: {
         name: "Aluminium Ingot",
         value: 6,
+        weight: 1,
         recipe: {
             [miningItems.aluminiumOre.name]: 2
         },
@@ -29,6 +32,7 @@ export const smeltedItems = {
     silverIngot: {
         name: "Silver Ingot",
         value: 8,
+        weight: 1,
         recipe: {
             [miningItems.silverOre.name]: 2
         },
@@ -37,6 +41,7 @@ export const smeltedItems = {
     zincIngot: {
         name: "Zinc Ingot",
         value: 15,
+        weight: 1,
         recipe: {
             [miningItems.zincOre.name]: 2
         },
@@ -45,6 +50,7 @@ export const smeltedItems = {
     nickelIngot: {
         name: "Nickel Ingot",
         value: 15,
+        weight: 1,
         recipe: {
             [miningItems.nickelOre.name]: 2
         },
@@ -53,6 +59,7 @@ export const smeltedItems = {
     lithiumIngot: {
         name: "Lithium Ingot",
         value: 15,
+        weight: 1,
         recipe: {
             [miningItems.lithiumOre.name]: 2
         },
@@ -61,6 +68,7 @@ export const smeltedItems = {
     silicon: {
         name: "Silicon",
         value: 15,
+        weight: 1,
         recipe: {
             [miningItems.quartz.name]: 10
         },
@@ -69,6 +77,7 @@ export const smeltedItems = {
     goldIngot: {
         name: "Gold Ingot",
         value: 30,
+        weight: 1,
         recipe: {
             [miningItems.goldOre.name]: 2
         },

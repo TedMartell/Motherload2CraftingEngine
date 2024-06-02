@@ -1,67 +1,63 @@
-export const globalInventory = {}
+export const globalInventory = new Map();
 export let globalInventoryWeight = 0
 export let globalInventoryValue = 0
 export {addToInventory, getInventory, removeFromInventory}
 
 function addToInventory(items) {
     for (let item of items) {
-    if (!(item.name in globalInventory)) {
-        globalInventory[item.name] = 1
-
-    } else {
-        globalInventory[item.name] ++
+        let foundItem = Array.from(globalInventory.keys()).find(invItem => invItem.name === item.name);
+        if (!foundItem) {
+            globalInventory.set(item, 1);
+        } else {
+            globalInventory.set(foundItem, globalInventory.get(foundItem) + 1);
+        }
+        globalInventoryWeight += item.weight;
+        globalInventoryValue += item.value;
     }
-    globalInventoryWeight += item.weight
-    globalInventoryValue += item.value
+    return globalInventory;
 }
-return globalInventory
-}
-
-function getInventory(globalInventory) {
-    let inventoryArray = Object.entries(globalInventory);
-    inventoryArray.sort((a, b) => b[1] - a[1]);
-
-    let inventoryString = '';
-    for (let [key, value] of inventoryArray) {
-        inventoryString += `${key}: ${value}, `;
-    }
-
-    if (inventoryString.length > 0) {
-        inventoryString = inventoryString.slice(0, -2);
-    }
-
-return  `Inventory: ${inventoryString}\nTotal Weight: ${globalInventoryWeight}\nTotal Value: ${globalInventoryValue}`;
-
-}
-
 
 
 function removeFromInventory(items, amount) {
-    if (Object.keys(globalInventory).length === 0) {
+    if (globalInventory.size === 0) {
         return `Your inventory is empty!`;
     }
 
     for (let item of items) {
-        if (!(item.name in globalInventory)) {
+        let foundItem = Array.from(globalInventory.keys()).find(invItem => invItem.name === item.name);
+        if (!foundItem) {
             return `${item.name} not found`;
         } else {
-            if (globalInventory[item.name] < amount) {
+            if (globalInventory.get(foundItem) < amount) {
                 return `Not enough ${item.name} in inventory`;
             }
-            globalInventory[item.name] -= amount;
-            globalInventoryWeight -= item.weight * amount;
-            globalInventoryValue -= item.value * amount;
+            globalInventory.set(foundItem, globalInventory.get(foundItem) - amount);
+            globalInventoryWeight -= (item.weight * amount);
+            globalInventoryValue -= (item.value * amount);
             
-            if (globalInventory[item.name] === 0) {
-                delete globalInventory[item.name];
+            if (globalInventory.get(foundItem) === 0) {
+                globalInventory.delete(foundItem);
             }
             
             console.log(`${item.name} removed from inventory`);
         }
     }
-return globalInventory
-
+    return globalInventory;
 }
+
+
+function getInventory(globalInventory) {
+    let inventoryString = '';
+    for (let [key, value] of globalInventory) {
+        inventoryString += `${key.name}: ${value}, `;
+    }
+    if (inventoryString.length > 0) {
+        inventoryString = inventoryString.slice(0, -2);
+    }
+
+    return `Inventory: ${inventoryString}\nTotal Weight: ${globalInventoryWeight}\nTotal Value: ${globalInventoryValue}`;
+}
+
 
 
 
