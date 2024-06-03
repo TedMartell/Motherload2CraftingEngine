@@ -7,6 +7,7 @@ import { craftAllItems, craftItem, craftMultipleItems } from "./utilities/crafti
 import { addToInventory, getInventory, globalInventory } from "./utilities/inventory.js";
 
 function main() {
+console.log(miningBlocks.coalBlock.hp)
 addToInventory([miningItems.coal, miningItems.diamond, miningItems.copperOre, miningItems.copperOre,
     miningItems.copperOre, miningItems.copperOre, miningItems.copperOre, miningItems.copperOre,
      miningItems.copperOre, miningItems.copperOre, miningItems.copperOre])
@@ -19,6 +20,11 @@ addToInventory([miningItems.zincOre, miningItems.zincOre,miningItems.zincOre,min
     miningItems.zincOre,miningItems.zincOre,miningItems.zincOre,miningItems.zincOre,
     miningItems.zincOre,miningItems.zincOre,miningItems.zincOre,miningItems.zincOre, ])
 craftAllItems(smeltedItems.zincIngot)
+getInventory(globalInventory)
+addToInventory([smeltedItems.nickelIngot, smeltedItems.nickelIngot, smeltedItems.lithiumIngot, smeltedItems.lithiumIngot])
+craftItem(factoryItems.battery)
+getInventory(globalInventory)
+
 
 }
 

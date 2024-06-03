@@ -96,6 +96,7 @@ export const smeltedItems = {
 smeltedItems.steel = {
     name: "Steel",
     value: 8,
+    weight: 1,
     recipe: {
         [smeltedItems.ironIngot.name]: 2,
         [miningItems.coal.name]: 2
@@ -106,6 +107,7 @@ smeltedItems.steel = {
 smeltedItems.stainlessSteel = {
     name: "Stainless Steel",
     value: 20,
+    weight: 1,
     recipe: {
         [miningItems.chromiumOre.name]: 1,
         [smeltedItems.ironIngot.name]: 1,

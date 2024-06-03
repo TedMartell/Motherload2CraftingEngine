@@ -8,6 +8,7 @@ export const factoryItems = {
     copperWire: {
         name: "Copper Wire",
         value: 18,
+        weight: 1,
         recipe: {
             [smeltedItems.copperIngot.name]: 2
         },
@@ -16,6 +17,7 @@ export const factoryItems = {
     battery: {
         name: "Battery",
         value: 68,
+        weight: 1,
         recipe: {
             [smeltedItems.zincIngot.name]: 2,
             [smeltedItems.nickelIngot.name]: 2,
@@ -26,6 +28,7 @@ export const factoryItems = {
     laserWeapon: {
         name: "Laser Weapon",
         value: 1500,
+        weight: 1,
         recipe: {
             [miningItems.rareEarthMinerals.name]: 1
         },
@@ -39,6 +42,7 @@ export const factoryItems = {
 factoryItems.circuitBoard = {
     name: "Circuit Board",
     value: 40,
+    weight: 1,
     recipe: {
         [smeltedItems.silicon.name]: 1,
         [factoryItems.copperWire.name]: 1
@@ -48,6 +52,7 @@ factoryItems.circuitBoard = {
 factoryItems.solarpanel = {
     name:"Solar Panel",
     value: 55,
+    weight: 1,
     recipe: {
         [factoryItems.copperWire.name]: 1,
         [smeltedItems.silicon.name]: 1,

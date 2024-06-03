@@ -9,6 +9,7 @@ function craftItem(newItem) {
     for (let [requiredItemName, requiredQuantity] of Object.entries(recipe)) {
         let requiredItem = Array.from(globalInventory.keys()).find(invItem => invItem.name === requiredItemName);
         if (!requiredItem || globalInventory.get(requiredItem) < requiredQuantity) {
+            console.log(`Not enough ${requiredItemName} in inventory`)
             return `Not enough ${requiredItemName} in inventory`;
         }
     }
@@ -29,40 +30,23 @@ function craftItem(newItem) {
 function craftMultipleItems(newItem, amount) {
     const recipe = newItem.recipe;
     while (amount > 0){
-
-    // Check if all required items and their quantities are present in the inventory
-    for (let [requiredItemName, requiredQuantity] of Object.entries(recipe)) {
-        let requiredItem = Array.from(globalInventory.keys()).find(invItem => invItem.name === requiredItemName);
-        if (!requiredItem || globalInventory.get(requiredItem) < requiredQuantity) {
-            console.log(`Not enough ${requiredItemName} in inventory`)
-            return `Not enough ${requiredItemName} in inventory`;
-        }
-    }
-
-    // Remove the required items from the inventory
-    for (let [requiredItemName, requiredQuantity] of Object.entries(recipe)) {
-        let requiredItem = Array.from(globalInventory.keys()).find(invItem => invItem.name === requiredItemName);
-        if (requiredItem) {
-            removeFromInventory([requiredItem], requiredQuantity);
-        }
-    }
-
-    // Add the crafted item to the inventory
-    addToInventory([newItem]);
+    craftItem(newItem)
     amount -= 1;
     }
-    return `Crafted ${amount}x ${newItem.name} and added it to inventory`;
 }
 
 function craftAllItems(newItem) {
-    const recipe = newItem.recipe;
-    for (let [requiredItemName, requiredQuantity] of Object.entries(recipe)) {
-        let requiredItem = Array.from(globalInventory.keys()).find(invItem => invItem.name === requiredItemName);
-        if (!requiredItem || globalInventory.get(requiredItem) < requiredQuantity) {
-            console.log(`Not enough ${requiredItemName} in inventory`)
-            return `Not enough ${requiredItemName} in inventory`;
+    let craftedCount = 0;
+    while (true) {
+        const result = craftItem(newItem);
+        if (result.startsWith("Not enough")) {
+            break;
         }
+        craftedCount++;
     }
-    return craftAllItems(newItem)
+    console.log(`Crafted ${craftedCount} ${newItem.name}(s) and added them to inventory`)
+    return `Crafted ${craftedCount} ${newItem.name}(s) and added them to inventory`;
 }
+
+
 
